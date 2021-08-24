@@ -45,7 +45,8 @@
       <% end %>
       <%#= will_paginate @tasks%>
     <% end %>
-    <%= will_paginate @tasks%>
+    <%= will_paginate @tasks%><br />
+    <%= link_to "Edit User", '/users/edit' %><br />
   </div>
 </div>
 <% else %>
