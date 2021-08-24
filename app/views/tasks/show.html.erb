@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @task.name %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @task.description %>
+</p>
+
+<p>
+  <strong>Assign to:</strong>
+  <%= @task.assign_to %>
+</p>
+
+<p>
+  <strong>Created by:</strong>
+  <%= @task.created_by %>
+</p>
+
+<%= link_to 'Edit', edit_task_path(@task) %> |
+<%= link_to 'Destroy', @task, method: :delete, data: { confirm: 'Are you sure?' } if current_user.role %> |
+<%= link_to 'Back', tasks_path %>
